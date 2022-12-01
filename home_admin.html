@@ -5,10 +5,10 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/list.css">
   <link rel="stylesheet" href="css/home_follower.css">
-  
+
   <link rel="stylesheet" type="text/css" href="muuri_module/css/search_reset.css" />
   <link rel="stylesheet" type="text/css" href="muuri_module/css/search_main.css" />
-  
+
   <script src="muuri_module/js/jquery.min.js"></script>
   <script src="muuri_module/js/web-animations.min.js"></script>
   <script src="muuri_module/js/muuri.js"></script>
@@ -28,14 +28,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
   <style>
     body {
-      font-family: "Alegreya Sans SC";font-size: 13px;
+      font-family: "Alegreya Sans SC";
+      font-size: 13px;
     }
- </style>
+  </style>
 </head>
 
 
 <body>
-
   <!-- タイトル -->
   <h1 class="title">資産管理システム</h1>
   <div class="button-list">
@@ -46,169 +46,147 @@
       ユーザー管理
       <img src="images/home/user.jpg" class="img-button" width="50" height="50"></a>
   </div>
-  <!-- 罫線 -->
 
+  <!-- 罫線 -->
   <hr class="hr1">
-  
+  絞り込みで資産を検索して削除、変更が行えます。新規登録は上のボタンから
+
+  <!-- メッセージ -->
+  <article class="message is-primary">
+    <div class="message-body">
+      <span id="message">データを取得してください</span>
+    </div>
+  </article>
+
+  <!-- 絞り込み -->
   <div style="background-color:#dededee1">
 
-絞り込みで資産を検索して削除、変更が行えます。新規登録は上のボタンから
-  <p class="tex">学科</p>
-  <p class="tex0">所属</p>
-  <p class="tex1">場所</p>
-  <p class="tex2">担当</p>
-  <p class="tex3">管理者</p>
-  <input id="search_" type="button" value="上記の条件で絞り込み" onclick="" />
-
-    <ul>
-      <li class="all active">ALL</li>
-      <li class="AD">AD</li>
-      <li class="EE">EE</li>
-      <li class="ME">ME</li>
-      <li class="CS">CS</li>
-      <li class="AC">AC</li>
+    <p class="tex0">所属</p>
+    <ul class="sort-btn">
+      <ul>
+        <li class="all active">ALL</li>
+        <li class="AD">AD</li>
+        <li class="EE">EE</li>
+        <li class="ME">ME</li>
+        <li class="CS">CS</li>
+        <li class="AC">AC</li>
+      </ul>
     </ul>
-    <br><br>
-    <select id="kind" class="select" style="width: 200px;">
-      <option value="default"></option>
-      <option value="AD">AD</option>
-      <option value="EE">EE</option>
-      <option value="ME">ME</option>
-      <option value="CS">CS</option>
-    </select>
-    <br>
-    <br>
-  
-    <select id="location" class="select" style="width: 200px;">
-      <option value="default"></option>
-      <option value="401">401</option>
-      <option value="402">402</option>
-      <option value="403">403</option>
-      <option value="404">404</option>
-      <option value="405">405</option>
-      <option value="406">406</option>
-      <option value="407">407</option>
-      <option value="408">408</option>
-      <option value="409">409</option>
-      <option value="410">410</option>
-    </select>
-<br><br>
 
-<select id="user" class="select" style="width: 200px;">
-<option value="default"></option>
-<option value="uchida">uchida</option>
-<option value="ooshima">ooshima</option>
-<option value="utsugi">utsugi</option>
-</select>
-<br>
-<br>
+    <p class="tex1">場所</p>
+    <div style="text-align: -webkit-center;">
+      <select id="location" class="select" style="width: 200px;">
+        <option value="default"></option>
+        <option value="401">401</option>
+        <option value="402">402</option>
+        <option value="403">403</option>
+        <option value="404">404</option>
+        <option value="405">405</option>
+        <option value="406">406</option>
+        <option value="407">407</option>
+        <option value="408">408</option>
+        <option value="409">409</option>
+        <option value="410">410</option>
+      </select>
+    </div>
 
-<select id="admin" class="select" style="width: 200px;">
-<option value="default"></option>
-<option value="shimakawa">shimakawa</option>
-</select>
-</div>
+    <p class="tex2">担当</p>
+    <div style="text-align: -webkit-center;">
+      <select id="user" class="select" style="width: 200px;">
+        <option value="default"></option>
+        <option value="uchida">uchida</option>
+        <option value="ooshima">ooshima</option>
+        <option value="utsugi">utsugi</option>
+      </select>
+    </div>
 
-    <!-------------->
+    <p class="tex3">管理者</p>
+    <div style="text-align: -webkit-center;">
+      <select id="admin" class="select" style="width: 200px; text-align: -webkit-center;">
+        <option value="default"></option>
+        <option value="shimakawa">shimakawa</option>
+      </select>
+    </div>
 
-    <ul class="grid">
-      <li class="item AD" room-data="room405">
-        <div class="item-content">
-          <img src="muuri_module/img/480x320.png" alt="" />
-            image_01
-        </div>
-      </li>
+    <input id="search_" type="button" value="上記の条件で絞り込み" onclick="data_change_format_muuriHTML();" />
+    <br><br><br><br><br>
+  </div>
+  <br><br>
 
-      <li class="item CS" room-data="room406">
-        <div class="item-content">
-          <img src="muuri_module/img/480x320.png" alt="" />
-          image_02
-        </div>
-      </li>
-
-      <li class="item ME" room-data="room405">
-        <div class="item-content">
-          <img src="muuri_module/img/480x320.png" alt="" />
-          image_03
-        </div>
-      </li>
-
-      <li class="item AC" room-data="room407">
-        <div class="item-content">
-          <img src="muuri_module/img/480x320.png" alt="" />
-          image_04
-        </div>
-      </li>
-
-      <li class="item EE" room-data="room406">
-        <div class="item-content">
-          <img src="muuri_module/img/480x320.png" alt="" />
-          image_05
-        </div>
-      </li>
-    </ul>
-  
-
-    <article id = "structure_text">
-
-    </article>
-
-    <input type="button" value="あああ" onclick="data_change_format_muuriHTML();">
+  <!-------------->
 
 
+  <ul class="grid">
+    <li class="item AD" room-data="room405">
+      <div class="item-content">
+        <img src="muuri_module/img/480x320.png" alt="" />
+        image_01
+      </div>
+    </li>
+
+    <li class="item CS" room-data="room406">
+      <div class="item-content">
+        <img src="muuri_module/img/480x320.png" alt="" />
+        image_02
+      </div>
+    </li>
+
+    <li class="item ME" room-data="room405">
+      <div class="item-content">
+        <img src="muuri_module/img/480x320.png" alt="" />
+        image_03
+      </div>
+    </li>
+
+    <li class="item AC" room-data="room407">
+      <div class="item-content">
+        <img src="muuri_module/img/480x320.png" alt="" />
+        image_04
+      </div>
+    </li>
+
+    <li class="item EE" room-data="room406">
+      <div class="item-content">
+        <img src="muuri_module/img/480x320.png" alt="" />
+        image_05
+      </div>
+    </li>
+  </ul>
+
+
+  <!-- 要素自動生成 -->
+  <article id="structure_text">
+
+  </article>
+
+  <input type="button" value="あああ" onclick="data_change_format_muuriHTML();">
 
 
 
-    <br><br><br><br><br><br>
-  <section class="section">
+
+
+
+
   デバックゾーン
-    <div class="columns">
-      <div class="column">
-        <input id="csv_file" value="ファイルを直接開く" type="file">
-        <input type="button" value="データ更新" onclick="refresh();">
-        <input type="button" value="*debug console.log(data)" onclick="Utt();">
-      </div>
+  <div class="columns">
+    <div class="column">
+      <input id="csv_file" value="ファイルを直接開く" type="file">
+      <input type="button" value="データ更新" onclick="refresh();">
+      <input type="button" value="*debug console.log(data)" onclick="Utt();">
     </div>
+  </div>
 
-    <div>
-      <input type="button" value="この条件で検索" onclick="location_search()" />
-      <input type="button" value="この条件で検索" onclick="kind_search()" />
-      <input type="button" value="この条件で検索" onclick="user_search()" />
-      <input type="button" value="この条件で検索" onclick="admin_search()" />
-    </div>
-
-    <br>
-    <br>
-    <table id="output_csv"></table>
-
-    <div class="columns">
-      <div class="column" style="overflow-y: scroll;">
-        <table id="csv_data_table" class="table is-bordered">
-          <thead>
-            <tr>
-              <th></th>
-              <th>資産番号</th>
-              <th>所属</th>
-              <th>資産名</th>
-              <th>場所</th>
-              <th>担当</th>
-              <th>管理者</th>
-              <th>形式</th>
-              <th>個数</th>
-              <th>識別番号</th>
-              <th>取得日時</th>
-              <th>編集日時</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-
+  <div>
+    <input type="button" value="この条件で検索" onclick="location_search()" />
+    <input type="button" value="この条件で検索" onclick="kind_search()" />
+    <input type="button" value="この条件で検索" onclick="user_search()" />
+    <input type="button" value="この条件で検索" onclick="admin_search()" />
+  </div>
   </section>
 
 
   <script src="js/scripts.js"></script>
   <script src="js/root.js"></script>
 </body>
+
 </html>

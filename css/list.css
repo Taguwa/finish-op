@@ -1,39 +1,32 @@
-.tex{
-    position: relative;
-	top: 30%;
-	left: 30%;
-	border-left:5px solid #4a4a4a;
-	padding:2px 10px;
-		
-  }
+
 .tex0{
     position: relative;
-	top: 45%;
-	left: 30%;
+	top:25px;
+	left: 25%;
 	border-left:5px solid #4a4a4a;
 	padding:2px 10px;
 		
   }
   .tex1{
     position: relative;
-	top: 340px;
-	left: 400px;
+	top: 25px;
+	left: 25%;
 	border-left:5px solid #4a4a4a;
 	padding:2px 10px;
 		
   }
   .tex2{
     position: relative;
-	top: 390px;
-	left: 400px;
+	top: 25px;
+	left: 25%;
 	border-left:5px solid #4a4a4a;
 	padding:2px 10px;
 		
   }
   .tex3{
     position: relative;
-	top: 440px;
-	left: 400px;
+	top: 25px;
+	left: 25%;
 	border-left:5px solid #4a4a4a;
 	padding:2px 10px;
 		
@@ -41,13 +34,14 @@
   #search_ {
 	height: 50px;
 	padding: 0 20px;
-	position: absolute;
-	left: 550;
-	top: 500;
+	position: relative;
+	left: 40%;
+	top: 20px;
 	border-radius: 40px;
 	outline: 0;
 	background: rgb(255, 255, 255);
 }
+
 #form2 {
 	position: relative;
 	max-width: 300px;
@@ -73,7 +67,7 @@
 	/*アイコン左右の位置調整*/
 	top: 0;
 	background: none;
-	color: #666;
+	color: rgb(255, 255, 255);
 	border: none;
 	font-size: 20px;
 	/*アイコンサイズ*/

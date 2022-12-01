@@ -3,7 +3,16 @@
 //
 
 message.innerHTML = "データを取得してください";
-
+//select2 config
+$(document).ready(function () {
+    $('.select').select2({
+      width: '350px',
+      placeholder: '　',
+      allowClear: true,
+      language: 'ja',
+      tags: true
+    });
+  });
 //
 //SQL関連
 //
@@ -364,18 +373,6 @@ function admin_search() {
     message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
 };
 
-//select2 config
-$(document).ready(function () {
-    $('.select').select2({
-      width: '350px',
-      placeholder: '　',
-      allowClear: true,
-      language: 'ja',
-      tags: true
-    });
-  });
-
-
 //data -> muuri HTML形式に生成して変更　（ボタンを押した時）
 function data_change_format_muuriHTML(){
 
@@ -397,17 +394,17 @@ var a = {   "id": "1",
 
 //HTML生成
  var addcode = '<div class="item-content"><img src="muuri_module/img/480x320.png" alt="" />' 
-                + '<br><strong>資産番号　: ' +  a.資産番号 + '</strong><br>'
-                + '所属　: ' +  a.所属 + '<br>'
-                + '資産名　: ' +  a.資産名 + '<br>'
-                + '場所　: ' +  a.場所 + '<br>'
-                + '担当　: ' +  a.担当 + '<br>'
-                + '管理者　: ' +  a.管理者 + '<br>'
-                + '形式　: ' +  a.形式 + '<br>'
-                + '個数　: ' +  a.個数 + '<br>'
-                + '識別番号　: ' +  a.識別番号 + '<br>'
-                + '取得日時　: ' +  a.取得日時 + '<br>'
-                + '編集日時　: ' +  a.編集日時+ '</div>';
+                + '<br><strong>資産番号</strong>　: ' +  a.資産番号 + '<br>'
+                + '<strong>所属学科</strong>　: ' +  a.所属 + '<br>'
+                + '<strong>資産名</strong>　: ' +  a.資産名 + '<br>'
+                + '<strong>場所</strong>　: ' +  a.場所 + '<br>'
+                + '<strong>担当</strong>　: ' +  a.担当 + '    '
+                + '<strong>管理者</strong>　: ' +  a.管理者 + '<br>'
+                + '<strong>形式</strong>　: ' +  a.形式 + '<br>'
+                + '<strong>個数</strong>　: ' +  a.個数
+                + ' - ' +  a.識別番号 + '<br>'
+                + '<strong>取得日時</strong>　: ' +  a.取得日時 + '   '
+                + '<strong>最終編集</strong>　: ' +  a.編集日時+ '</div>';
  
 //生成した変数addcodeをinsertする
 structure_text.insertAdjacentHTML('afterbegin',addcode);
