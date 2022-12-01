@@ -1,0 +1,119 @@
+html,
+
+body {
+	overflow: hidden;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	line-height: 0.7;
+	font-family: "游ゴシック", "ヒラギノ角ゴ ProN W3", "sans-serif";
+}
+
+.left,
+.right {
+	display: inline-block;
+}
+
+.left {
+	font-size: 300%
+}
+
+hr {
+	padding: 20px 0;
+	border: none;
+}
+
+.hr1 {
+	border-top: 5px solid rgb(252, 153, 60);
+}
+
+/***以下、元あったstyle.css***/
+
+/*
+form {
+	text-align: center;
+}
+
+.login_form_btm {
+	padding: 10px 0;
+	background-color: #F7F7F7;
+	margin: 10px 0;
+}
+
+input {
+	width: 200px;
+	padding: 3px;
+	margin: 5px 0;
+}
+
+#g_navi {
+	background: #AAAAAA;
+}
+
+#g_navi ul {
+	display: flex;
+	margin: 0 auto;
+	padding: 0 3%;
+	width: 94%;
+	max-width: 960px;
+	list-style-type: none;
+}
+
+#g_navi ul li {
+	position: relative;
+	width: 20%;
+}
+
+#g_navi ul li:first-child::before {
+	position: absolute;
+	display: block;
+	content: "";
+	top: 25%;
+	left: 0px;
+	width: 1px;
+	height: 50%;
+	background-color: #555555;
+}
+
+#g_navi ul li::after {
+	position: absolute;
+	display: block;
+	content: "";
+	top: 25%;
+	right: 0px;
+	width: 1px;
+	height: 50%;
+	background-color: #555555;
+}
+
+#g_navi ul li a {
+	display: block;
+	padding: 17px 10px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+#g_navi ul li a:hover {
+	background-color: #555555;
+}
+
+
+
+
+.item__header {
+	padding: 10px;
+}
+
+.item__user-icon {
+	float: left;
+}
+
+.item__user-name,
+.item__date {
+	display: block;
+	margin-left: 60px;
+}*/

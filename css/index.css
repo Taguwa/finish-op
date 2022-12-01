@@ -1,0 +1,38 @@
+p.title1 {position: relative; top: 48; left: 460;}
+p.title2 {position: relative; top: -32; left: 565;}
+
+
+
+#submit_id {
+	height: 30px;
+	padding: 0 10px;
+	position: absolute;
+	left: 450;
+	top: 160;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#submit_pass {
+	height: 30px;
+	padding: 0 10px;
+	position: absolute;
+	left: 450;
+	top: 210;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+
+#login_button {
+	height: 50px;
+	padding: 0 65px;
+	position: absolute;
+	left: 450;
+	top: 280;
+	border-radius: 10px;
+	outline: 0;
+	background: rgb(255, 174, 94);
+}

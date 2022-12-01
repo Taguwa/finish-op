@@ -1,0 +1,27 @@
+html,
+
+/**/
+body {
+  overflow: hidden;
+}
+
+.button-list {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  /*ボタンが等間隔に並ぶように調整*/
+}
+
+.img-button {
+  cursor: pointer;
+  /*ボタン(画像)の上にカーソルがあるときpointerに変更*/
+}
+
+/* リセットスタイル */
+.img-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: relative;
+  display: block;
+}

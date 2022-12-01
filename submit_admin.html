@@ -1,0 +1,123 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/submit.css">
+
+  <link rel="stylesheet" href="css/home_follower.css">
+  
+  <script type="text/javascript" src="js/submit.js"></script>
+  <script type="text/javascript" src="js/root.js"></script>
+  <script type="text/javascript" src="js/login_function.js"></script>
+
+  <link href="css/library/select2.min.css" rel="stylesheet" />
+  <script src="js/library/jquery-3.6.0.min.js"></script>
+  <script src="js/library/select2.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>資産の登録</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  </head>
+  
+
+  <body>
+     <!-- タイトル -->
+  <h1 class="title">資産登録</h1>
+  <!-- 罫線 -->
+  
+  <a class="home_link" href="home_follower.html">ホーム</a>
+  <hr class="hr1">
+    <section class="section">
+
+    <div class="columns">
+      <div class="column">
+        <article class="message is-primary">
+          <div class="message-body">
+            <span id="message">資産情報を登録してください</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  <div>
+
+    <select id="submit_kind" class="select" style="width: 200px;">
+      <option value="default">所属を選択</option>
+      <option value="AD">AD</option>
+      <option value="EE">EE</option>
+      <option value="ME">ME</option>
+      <option value="CS">CS</option>
+    </select>
+
+    <select id="submit_place" class="select" style="width: 200px;">
+      <option value="default">場所を選択してください</option>
+      <option value="401">401</option>
+      <option value="402">402</option>
+      <option value="403">403</option>
+      <option value="404">404</option>
+      <option value="405">405</option>
+      <option value="406">406</option>
+      <option value="407">407</option>
+      <option value="408">408</option>
+      <option value="409">409</option>
+      <option value="410">410</option>
+    </select>
+
+    <input id="submit_user" id="s" name="s" type="text" placeholder="担当を入力してください" />
+      
+    <input id="submit_admin" id="s" name="s" type="text" placeholder="管理者を入力してください" />
+
+    <input id="submit_name" id="s" name="s" type="text" placeholder="資産名を入力してください" />
+      
+    <select id="submit_format" class="select" style="width: 200px;">
+      <option value="default">形式を選択</option>
+      <option value="PC">PC</option>
+      <option value="PHONE">PHONE</option>
+    </select>
+
+    <input id="submit_number" id="s" name="s" type="text" placeholder="個数を入力してください" />
+        
+    <input id="submit_images" value="ファイルを直接開く" type="file">
+
+  </div>
+  <div>
+    <input id="submit_button" type="button" value="入力内容を保存" onclick="submit_input()" />
+  </div>
+  <div>
+    <input id="upload_button" type="button" value="登録" onclick="upload_input()" />
+  </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="columns">
+      <div class="column">
+        <article class="message is-primary">
+          <div class="message-body">
+            <span id="message_out">----</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/submit.js"></script>
+
+  </body>
+</html>

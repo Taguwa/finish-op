@@ -1,0 +1,59 @@
+html, body {
+    overflow: hidden;
+}
+
+h1{
+    font-size: 300%;
+}
+
+.home_link {
+    font-size: 20px;
+}
+
+hr {
+    padding: 20px 0;
+    border: none;
+}
+
+.hr1 {
+    border-top: 5px solid rgb(252, 153, 60);
+}
+
+label {
+    font-size: 35px;
+    display: inline-block;
+    text-align: right;
+    width: 120px;
+}
+
+select {
+    font-size: 35px;
+    width: 35.4%;
+    margin: 0.5em 0;
+}
+
+input {
+    font-size: 35px;
+    width: 35%;
+    margin: 0.5em 0;
+}
+
+.center_form {
+    position: relative;
+    top: 90px;
+}
+
+.Asset_photo_src {
+    width: 30%;
+    height: auto;
+    margin-left: 1100px;
+    position: relative;
+    bottom: 350px;
+}
+
+.Finish_button {
+    font-size: 20px;
+    margin-left: 1630px;
+    position: relative;
+    bottom: 270px;
+}
