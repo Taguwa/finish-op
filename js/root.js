@@ -7,7 +7,7 @@ message.innerHTML = "データを取得してください";
 $(document).ready(function () {
     $('.select').select2({
       width: '350px',
-      placeholder: '　',
+      placeholder: ' ',
       allowClear: true,
       language: 'ja',
       tags: true
@@ -382,7 +382,7 @@ function data_change_format_muuriHTML(){
 //structure_text.remove();
 
 //テスト表示用オブジェクト
-var a = [{   "id": "1",
+var a = [{   id: "1",
 資産番号: '00000-99999999-00000',
 所属: 'EE',
 資産名: 'PC',
