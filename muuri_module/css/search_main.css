@@ -35,6 +35,7 @@
   cursor: pointer;
   padding: 0 0 0 30px;
   margin: 0 10px 0 0;
+  color: #fcfcfc;
 }
 
 /*横幅が810px以下になった際の指定*/
@@ -56,7 +57,7 @@
   left: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #333;
+  border: 2px solid #fcfcfc;
 }
 
 .sort-btn ul li.active::after {
@@ -66,8 +67,8 @@
   left: 5px;
   top: 0;
   /*チェックマークの色や形*/
-  border-left: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-left: 2px solid #fcfcfc;
+  border-bottom: 2px solid #fcfcfc;
   width: 16px;
   height: 9px;
   transform: rotate(-45deg);

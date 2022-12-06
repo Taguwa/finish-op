@@ -383,79 +383,72 @@ function data_change_format_muuriHTML(){
 
 //テスト表示用オブジェクト
 var a = [{   id: "1",
-資産番号: '00000-99999999-00000',
-所属: 'EE',
-資産名: 'PC',
-場所: '405',
-担当: 'uchida',
-管理者: 'shimakawa',
-形式: 'macbookpro',
-個数: '1',
-識別番号: '1',
-取得日時: '2022/07/12',
-編集日時: '2022/07/13'},{   "id": "1",
-資産番号: '00000-99999999-00000',
+資産番号: '00000001',
 所属: 'CS',
-資産名: 'PC',
-場所: '405',
-担当: 'uchida',
-管理者: 'shimakawa',
-形式: 'macbookpro',
+資産名: 'サーバーラック',
+場所: '413',
+担当: 'sushida',
+管理者: 'sushida',
+形式: 'YRK1200',
 個数: '1',
 識別番号: '1',
-取得日時: '2022/07/12',
-編集日時: '2022/07/13'},{   "id": "1",
-資産番号: '00000-99999999-00000',
-所属: 'ME',
-資産名: 'PC',
-場所: '405',
-担当: 'uchida',
-管理者: 'shimakawa',
-形式: 'macbookpro',
+取得日時: '2022/12/06',
+編集日時: '2022/12/06',
+URL: '006.png'},{   id: "1",
+資産番号: '00000001',
+所属: 'CS',
+資産名: 'サーバーラック',
+場所: '413',
+担当: 'sushida',
+管理者: 'sushida',
+形式: 'YRK1200',
 個数: '1',
 識別番号: '1',
-取得日時: '2022/07/12',
-編集日時: '2022/07/13'},{   "id": "1",
-資産番号: '00000-99999999-00000',
+取得日時: '2022/12/06',
+編集日時: '2022/12/06',
+URL: '009.png'},{   id: "1",
+資産番号: '00000001',
+所属: 'CS',
+資産名: 'サーバーラック',
+場所: '413',
+担当: 'sushida',
+管理者: 'sushida',
+形式: 'YRK1200',
+個数: '1',
+識別番号: '1',
+取得日時: '2022/12/06',
+編集日時: '2022/12/06',
+URL: '010.png'},{   id: "4",
+資産番号: '00000004',
 所属: 'AD',
-資産名: 'PC',
-場所: '405',
-担当: 'uchida',
-管理者: 'shimakawa',
-形式: 'macbookpro',
+資産名: '椅子',
+場所: '402',
+担当: 'sushida',
+管理者: 'sushida',
+形式: 'ASW1233',
 個数: '1',
 識別番号: '1',
-取得日時: '2022/07/12',
-編集日時: '2022/07/13'},{   "id": "1",
-資産番号: '00000-99999999-00000',
-所属: 'AC',
-資産名: 'PC',
-場所: '405',
-担当: 'uchida',
-管理者: 'shimakawa',
-形式: 'macbookpro',
-個数: '1',
-識別番号: '1',
-取得日時: '2022/07/12',
-編集日時: '2022/07/13'}]
-
+取得日時: '2022/12/06',
+編集日時: '2022/12/06',
+URL: '011.png'},
+]
+ 
 //HTML生成
 var addcode = '';
 for(var i = 0 ; i < a.length ;i ++){
-addcode += '<li class="item ' + a[i].所属 +'" room-data="room' + a[i].場所 + '"><div class="item-content" style="background-color:#f7f7f7e1; border: 2px solid #333333;"><img src="muuri_module/img/480x320.png" alt="" />' 
-                + '<br><strong>資産番号</strong> : ' +  a[i].資産番号 + '<br>'
-                + '<strong>所属学科</strong> : ' +  a[i].所属 + '<br>'
-                + '<strong>資産名</strong> : ' +  a[i].資産名 + '<br>'
-                + '<strong>場所</strong> : ' +  a[i].場所 + '<br>'
-                + '<strong>担当</strong> : ' +  a[i].担当 + '    '
-                + '<strong>管理者</strong> : ' +  a[i].管理者 + '<br>'
-                + '<strong>形式</strong> : ' +  a[i].形式 + '<br>'
-                + '<strong>個数</strong> : ' +  a[i].個数
-                + 'つ中 : ' +  a[i].識別番号 + 'つ目<br>'
-                + '<strong>取得日時</strong> : ' +  a[i].取得日時 + '   '
-                + '<strong>最終編集</strong> : ' +  a[i].編集日時 + '</div></li>';
-}
 
+addcode += '<li class="item EE" room-data="room405"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;">'
+    + '<img src="muuri_module/img/' + a[i].URL + '" alt="" /><br><br><hr class="hr1">'
+    + '<p style="margin-left: 10px;"><strong>[資産番号] </strong>' + a[i].資産番号 + '</p>'
+    + '<p style="margin-left: 10px;"><strong>[資産名] </strong>' + a[i].資産名 +'</p>'
+    + '<p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>' + a[i].担当 + ' / ' + a[i].場所 + '</p>'
+    + '<p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>' + a[i].担当 + ' / ' + a[i].管理者 + '</p>'
+    + '<p style="margin-left: 10px;"><strong>[形式] </strong>' + a[i].形式 +'</p>'
+    + '<p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>' + a[i].個数 + ' / ' + a[i].識別番号 + '</p>'
+    + '<p style="margin-left: 10px;"><strong>[取得日時] </strong>' + a[i].取得日時 + '</p><hr class="hr1">'
+    + '<input id="get_" type="button" value="変更" onclick="" />'
+    + '<input id="get_" type="button" value="削除" onclick="" /></div></li>';
+}
  console.log(addcode);
 
 //生成した変数addcodeをinsertする
