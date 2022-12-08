@@ -1,89 +1,130 @@
-#submit_kind {
+.flex_1{
+
+    display: flex;
+    border: 1px solid #333;
+}
+
+
+.cont_1{
+	width: 600px;
+}
+
+
+#submit_number{
 	height: 30px;
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
+	position: relative;
 	left: 100;
-	top: 300;
+	top: 0;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
 
-
-#submit_place {
+#submit_kind{
 	height: 30px;
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
+	position: relative;
 	left: 100;
-	top: 350;
+	top: 20;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
 
-#submit_user {
+#submit_name{
 	height: 30px;
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
+	position: relative;
 	left: 100;
-	top: 400;
+	top: 40;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
 
-#submit_admin {
+#submit_place{
 	height: 30px;
+
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
+	position: relative;
 	left: 100;
-	top: 450;
+	top: 60;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
-
-
-#submit_name {
+#submit_user{
 	height: 30px;
+
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
-	left: 330;
-	top: 300;
+	position: relative;
+	left: 100;
+	top: 80;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
-
-#submit_format {
+#submit_admin{
 	height: 30px;
+
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
-	left: 330;
-	top: 350;
+	position: relative;
+	left: 100;
+	top: 100;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
-
-
-#submit_number {
+#submit_format{
 	height: 30px;
+
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
-	left: 330;
-	top: 400;
+	position: relative;
+	left: 100;
+	top: 120;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
 }
-
-#submit_images {
+#submit_math{
 	height: 30px;
+
+	width: 250px;
 	padding: 0 10px;
-	position: absolute;
-	left: 330;
-	top: 450;
+	position: relative;
+	left: 100;
+	top: 140;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+#submit_date{
+	height: 30px;
+
+	width: 250px;
+	padding: 0 10px;
+	position: relative;
+	left: 100;
+	top: 160;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+#submit_images{
+	height: 30px;
+	width: 250px;
+	padding: 0 10px;
+	position: relative;
+	left: 100;
+	top: 180;
 	border-radius: 2px;
 	outline: 0;
 	background: #eee;
@@ -92,21 +133,23 @@
 #submit_button {
 	height: 50px;
 	padding: 0 20px;
-	position: absolute;
+	position: relative;
 	left: 100;
-	top: 550;
+	top: 200;
 	border-radius: 40px;
 	outline: 0;
-	background: #a66;
+	color: #eee;
+	background: #043454;
 }
 
 #upload_button {
 	height: 50px;
 	padding: 0 20px;
-	position: absolute;
-	left: 330;
-	top: 550;
+	position: relative;
+	left: 100;
+	top: 240;
 	border-radius: 40px;
 	outline: 0;
-	background: #f66;
+	color: #eee;
+	background: #043454;
 }

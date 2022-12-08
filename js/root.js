@@ -373,14 +373,6 @@ function admin_search() {
     message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
 };
 
-//data -> muuri HTML形式に生成して変更　（ボタンを押した時）
-function data_change_format_muuriHTML(){
-//get_element
- var structure_text = document.getElementById('structure_text');
-
-//elementに何かあったら消す
-//structure_text.remove();
-
 //テスト表示用オブジェクト
 var a = [{   id: "1",
 資産番号: '00000001',
@@ -394,26 +386,26 @@ var a = [{   id: "1",
 識別番号: '1',
 取得日時: '2022/12/06',
 編集日時: '2022/12/06',
-URL: '006.png'},{   id: "1",
-資産番号: '00000001',
+URL: '006.png'},{   id: "2",
+資産番号: '00000002',
 所属: 'CS',
-資産名: 'サーバーラック',
+資産名: 'ドローン',
 場所: '413',
 担当: 'sushida',
 管理者: 'sushida',
-形式: 'YRK1200',
+形式: '???',
 個数: '1',
 識別番号: '1',
 取得日時: '2022/12/06',
 編集日時: '2022/12/06',
-URL: '009.png'},{   id: "1",
-資産番号: '00000001',
-所属: 'CS',
-資産名: 'サーバーラック',
-場所: '413',
+URL: '009.png'},{   id: "3",
+資産番号: '00000003',
+所属: 'EE',
+資産名: '銅像',
+場所: '中庭',
 担当: 'sushida',
 管理者: 'sushida',
-形式: 'YRK1200',
+形式: '???',
 個数: '1',
 識別番号: '1',
 取得日時: '2022/12/06',
@@ -425,14 +417,42 @@ URL: '010.png'},{   id: "4",
 場所: '402',
 担当: 'sushida',
 管理者: 'sushida',
-形式: 'ASW1233',
+形式: '卒業制作',
 個数: '1',
 識別番号: '1',
 取得日時: '2022/12/06',
 編集日時: '2022/12/06',
-URL: '011.png'},
-]
- 
+URL: '011.png'},{   id: "5",
+資産番号: '00000005',
+所属: 'CS',
+資産名: '本',
+場所: '408',
+担当: 'sushida',
+管理者: 'sushida',
+形式: 'アルゴリズムとデータ構造',
+個数: '1',
+識別番号: '1',
+取得日時: '2022/12/06',
+編集日時: '2022/12/06',
+URL: '008.png'}]
+
+function aaa(){
+    
+    console.log("id,資産番号,所属,資産名,場所,担当,管理者,形式,個数,識別番号,取得日時,編集日時,URL");
+    for(var i = 0 ; i < 5 ; i++){
+    var iiiiiiii = a[i].id +','+ a[i].資産番号 +','+  a[i].所属 +','+  a[i].資産名 +','+ a[i].場所 +','+  a[i].担当 +','+  a[i].管理者 +','+  a[i].形式 +','+  a[i].個数 +','+  a[i].識別番号 +','+  a[i].取得日時 +','+  a[i].編集日時 + ',' + a[i].URL
+
+    console.log(iiiiiiii);
+    }
+}
+
+//data -> muuri HTML形式に生成して変更　（ボタンを押した時）
+function data_change_format_muuriHTML(){
+//get_element
+ var structure_text = document.getElementById('structure_text');
+
+//elementに何かあったら消す
+//structure_text.remove(); 
 //HTML生成
 var addcode = '';
 for(var i = 0 ; i < a.length ;i ++){

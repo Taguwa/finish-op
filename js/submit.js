@@ -3,6 +3,7 @@
 //
 
 var str1,str2,str3,str4,str5,str6,str7,str8;
+
 function submit_input() {
     str1 = document.getElementById("submit_kind").value;
     console.log(str1);
@@ -20,8 +21,8 @@ function submit_input() {
     console.log(str7);
     str8 = document.getElementById("submit_images").value;
     console.log(str8);
-
-    message_out.innerHTML = "下記の内容で登録しますか？" + "<br>" + "学科 : "+ str1
+          
+    message_out.innerHTML = '<div class="message-body">下記の内容で登録しますか？' + "<br>" + "学科 : "+ str1
                                                 + "<br>" + "場所 : " + str2
                                                 + "<br>" + "所有者 : " + str3
                                                 + "<br>" + "管理者 : " + str4
@@ -29,7 +30,11 @@ function submit_input() {
                                                 + "<br>" + "形式 : " + str6
                                                 + "<br>" + "個数 : " + str7
                                                 + "<br>" + "画像ファイル（仮） : " + str8
+    var structure_text = document.getElementById('submit_botton');
+    var addcode = '<input id="upload_button" type="button" value="登録" onclick="upload_input()" /></div>';
     
+    //生成した変数addcodeをinsertする
+    structure_text.insertAdjacentHTML('afterend',addcode);
 };
 
 function upload_input(){
@@ -49,3 +54,7 @@ function upload_input(){
         "編集日時": "2022/07/13"
     });
 }
+
+
+
+    
