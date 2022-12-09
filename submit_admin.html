@@ -9,7 +9,6 @@
   <script src="js/library/jquery-3.6.0.min.js"></script>
   <script src="js/library/select2.min.js"></script>
   
-  <script type="text/javascript" src="js/submit.js"></script>
   <script type="text/javascript" src="js/root.js"></script>
   <script type="text/javascript" src="js/login_function.js"></script>
 
@@ -51,14 +50,14 @@
 
   <!-- メッセージ -->
           <div class="message-body">
-            <span id="message_submit"><strong>資産情報を登録してください</strong><br>
-              ・説明に沿って情報を入力してください<br>
-              ・[ 入力内容を確認 ]を押し、確認後登録ボタンを押すことで登録されます<br>
-              ・[ *必須 ]がついている箇所は未入力だと登録できません<br>
+            <div id="message_submit"><strong>資産情報を登録してください</strong><br>
+              ・説明に沿って情報を入力してください<br><br>
+              ・　_________________________を押し、確認後______________を押すことで登録されます<br><br>
+              ・　___________がついている箇所は未入力だと登録できません<br>
               ・ついていない箇所は初期値が入力されます<br>
-              ・資産一覧ページから変更、削除が可能です</span>
+              ・資産一覧ページから変更、削除が可能です</div>
+              
           </div>
-
           
   <div  class="flex_1">
     <div class ="cont_1">
@@ -78,19 +77,8 @@
     <input id="submit_name" type="text" placeholder="資産名" />
 
     <br>
-    <select id="submit_place">
-      <option value="default">場所を選択してください</option>
-      <option value="401">401</option>
-      <option value="402">402</option>
-      <option value="403">403</option>
-      <option value="404">404</option>
-      <option value="405">405</option>
-      <option value="406">406</option>
-      <option value="407">407</option>
-      <option value="408">408</option>
-      <option value="409">409</option>
-      <option value="410">410</option>
-    </select>
+
+    <input id="submit_place" type="text" placeholder="場所" />
 
     <br>
     <input id="submit_user" type="text" placeholder="担当" />
@@ -116,8 +104,18 @@
   <br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
+<div class="cont_2">
+  <br>
+  <p class="must1">* 必須</p>
+  <p class="must2">* 必須</p>
+  <p class="must3">* 必須</p>
+  <p class="must4">* 必須</p>
+  <p class="must5">* 必須</p>
+  <p class="must6">* 必須</p>
+  <p class="must7">* 必須</p>
+</div>
  
-  <div class="cont_2">
+  <div class="cont_3">
     <br>
     <br>
     <span id="message_out"></span>
@@ -129,28 +127,12 @@
   </div>
   </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  
     
+    <p class="must">入力内容を確認</p>
+    <p class="must-1">登録</p>
+    <p class="must0">* 必須</p>
    
-
-  <script type="text/javascript" src="js/submit.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/root.js"></script>
 

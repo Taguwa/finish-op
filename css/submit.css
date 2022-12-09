@@ -1,15 +1,60 @@
 .flex_1{
 
     display: flex;
-    border: 1px solid #333;
+
+    border: 3px solid #043454;
 }
 
 
 .cont_1{
-	width: 600px;
+	width: 400px;
+	left :50px;
+    border: 0px solid #043454;
+}
+.cont_2{
+	width:300px;
+    border: 0px solid #043454;
+}
+.cont_3{
+	width:500px;
+    border: 1px solid #043454;
 }
 
+.must{
+	left:55px;
+	top:-730px;
+	height: 20px;
+	width: 150px;
+	padding: 0 20px;
+	position: relative;
+	border-radius: 10px;
+	outline: 0;
+	color: #fcfcfc;
+	background: #043454;
+}
 
+.must-1{
+	left:310px;
+	top:-750px;
+	height: 20px;
+	width: 75px;
+	padding: 0 20px;
+	position: relative;
+	border-radius: 10px;
+	outline: 0;
+	color: #fcfcfc;
+	background: #043454;
+}
+.must0{
+	left:55px;
+	top:-735px;
+	position:relative;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+}
+/*cont_1*/
 #submit_number{
 	height: 30px;
 	width: 250px;
@@ -132,24 +177,90 @@
 
 #submit_button {
 	height: 50px;
+	width: 200px;
 	padding: 0 20px;
 	position: relative;
 	left: 100;
 	top: 200;
-	border-radius: 40px;
+	border-radius: 20px;
 	outline: 0;
 	color: #eee;
 	background: #043454;
 }
+/*cont_2*/
 
+.must1{
+    position: relative;
+	top:0px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must2{
+    position: relative;
+	top:27px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must3{
+    position: relative;
+	top:54px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must4{
+    position: relative;
+	top:81px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must5{
+    position: relative;
+	top:108px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must6{
+    position: relative;
+	top:135px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+  .must7{
+    position: relative;
+	top:162px;
+	left: 0%;
+	color: #ff2020; 
+	border-left:5px solid #ff2020;
+	padding:2px 10px;
+		
+  }
+
+/*cont_3*/
 #upload_button {
+	width: 200px;
 	height: 50px;
 	padding: 0 20px;
-	position: relative;
-	left: 100;
-	top: 240;
-	border-radius: 40px;
+	position: absolute;
+	border-radius: 20px;
 	outline: 0;
-	color: #eee;
+	color: #fcfcfc;
 	background: #043454;
 }

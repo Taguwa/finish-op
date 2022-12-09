@@ -1,9 +1,13 @@
 //
+//
 //データの管理（すべてのHTMLでincludeして）
 //
-
+//
 message.innerHTML = "データを取得してください";
+
+//
 //select2 config
+//
 $(document).ready(function () {
     $('.select').select2({
       width: '350px',
@@ -13,23 +17,20 @@ $(document).ready(function () {
       tags: true
     });
   });
+
 //
 //SQL関連
 //
 function connect_SQL(){
- // requireの設定
  const mysql = require('mysql');
-
  // MySQLとのコネクションの作成
  const connection = mysql.createConnection({
      host : 'localhost',
      user : 'root',
      database: 'data'
  });
- 
  // 接続
  connection.connect();
- 
  // userdataの取得
  connection.query('SELECT * from userdata;', function (err, rows, fields) {
      if (err) { console.log('err: ' + err); } 
@@ -38,7 +39,6 @@ function connect_SQL(){
      console.log('id: ' + rows[0].id);
  
  });
- 
  // userdataのカラムを取得
  connection.query('SHOW COLUMNS FROM userdata;', function (err, rows, fields) {
      if (err) { console.log('err: ' + err); }
@@ -200,12 +200,6 @@ var data = [
         "取得日時": "2022/07/12",
         "編集日時": "2022/07/13"
     }]
-
-function data_upload(){
-
-};
-
-//更新 table
 function refresh() {
 
     console.log(data);
@@ -236,7 +230,9 @@ function refresh() {
     message.innerHTML = data.length + "件のデータがあります。"
 };
 
-//絞り込み検索
+//
+//絞り込み検索関数
+//
 function location_search() {
     const str = document.getElementById("location1").value;
 
@@ -373,7 +369,9 @@ function admin_search() {
     message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
 };
 
-//テスト表示用オブジェクト
+//
+//表示関係
+//
 var a = [{   id: "1",
 資産番号: '00000001',
 所属: 'CS',
@@ -474,3 +472,64 @@ addcode += '<li class="item EE" room-data="room405"><div class="item-content" st
 //生成した変数addcodeをinsertする
 structure_text.insertAdjacentHTML('afterend',addcode);
 };
+
+//
+//登録関係
+//
+var str1,str2,str3,str4,str5,str6,str7,str8,str9,str10;
+
+function submit_input() {
+    str1 = document.getElementById("submit_number").value;
+    str2 = document.getElementById("submit_kind").value;
+    str3 = document.getElementById("submit_name").value;
+    str4 = document.getElementById("submit_place").value;
+    str5 = document.getElementById("submit_user").value;
+
+    str6 = document.getElementById("submit_admin").value;
+    str7 = document.getElementById("submit_format").value;
+    str8 = document.getElementById("submit_math").value;
+    str9 = document.getElementById("submit_date").value;
+    str10 = document.getElementById("submit_images").value;
+   
+          
+    message_out.innerHTML = '<div class="message-body">下記の内容で登録しますか？' 
+                                                + "<br>" + "資産番号 : "+ str1
+                                                + "<br>" + "所属 : " + str2
+                                                + "<br>" + "資産名 : " + str3
+                                                + "<br>" + "場所 : " + str4
+                                                + "<br>" + "所有者 : " + str5
+                                                + "<br>" + "管理者 : " + str6
+                                                + "<br>" + "形式 : " + str7
+                                                + "<br>" + "個数 : " + str8
+                                                + "<br>" + "日付 : " + str9
+                                                + "<br>" + "URL : " + str10;
+    var structure_text = document.getElementById('submit_botton');
+    var addcode = '<input id="upload_button" type="button" value="登録" onclick="upload_input()" /></div>';
+    
+    //生成した変数addcodeをinsertする
+    structure_text.insertAdjacentHTML('afterend',addcode);
+};
+
+function data_upload(){
+
+};
+
+function upload_input(){
+    message_out.innerHTML = "登録しました。"
+    data.push({
+        "id":"0",
+        "資産番号": "00000-99999999-00000",
+        "所属":str1,
+        "資産名":str5,
+        "場所": str2,
+        "担当":str3,
+        "管理者":str4,
+        "形式":str6,
+        "個数":str7,
+        "識別番号": "1",
+        "取得日時": "2022/07/12",
+        "編集日時": "2022/07/13"
+    });
+    data_upload();
+}
+
