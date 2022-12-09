@@ -372,6 +372,23 @@ function admin_search() {
 //
 //表示関係
 //
+
+//棚卸しで使うかも
+function consoleLog_export_csv(){
+    
+    console.log("id,資産番号,所属,資産名,場所,担当,管理者,形式,個数,識別番号,取得日時,編集日時,URL");
+    for(var i = 0 ; i < 5 ; i++){
+    var iiiiiiii = a[i].id +','+ a[i].資産番号 +','+  a[i].所属 +','+  a[i].資産名 +','+ a[i].場所 +','+  a[i].担当 +','+  a[i].管理者 +','+  a[i].形式 +','+  a[i].個数 +','+  a[i].識別番号 +','+  a[i].取得日時 +','+  a[i].編集日時 + ',' + a[i].URL
+
+    console.log(iiiiiiii);
+    }
+}
+
+//data -> muuri HTML形式に生成して変更　（ボタンを押した時）
+function data_change_format_muuriHTML(){
+//get_element
+ var structure_text = document.getElementById('structure_text');
+//
 var a = [{   id: "1",
 資産番号: '00000001',
 所属: 'CS',
@@ -434,32 +451,17 @@ URL: '011.png'},{   id: "5",
 編集日時: '2022/12/06',
 URL: '008.png'}]
 
-function aaa(){
-    
-    console.log("id,資産番号,所属,資産名,場所,担当,管理者,形式,個数,識別番号,取得日時,編集日時,URL");
-    for(var i = 0 ; i < 5 ; i++){
-    var iiiiiiii = a[i].id +','+ a[i].資産番号 +','+  a[i].所属 +','+  a[i].資産名 +','+ a[i].場所 +','+  a[i].担当 +','+  a[i].管理者 +','+  a[i].形式 +','+  a[i].個数 +','+  a[i].識別番号 +','+  a[i].取得日時 +','+  a[i].編集日時 + ',' + a[i].URL
-
-    console.log(iiiiiiii);
-    }
-}
-
-//data -> muuri HTML形式に生成して変更　（ボタンを押した時）
-function data_change_format_muuriHTML(){
-//get_element
- var structure_text = document.getElementById('structure_text');
-
 //elementに何かあったら消す
 //structure_text.remove(); 
 //HTML生成
 var addcode = '';
 for(var i = 0 ; i < a.length ;i ++){
 
-addcode += '<li class="item EE" room-data="room405"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;">'
+addcode += '<li class="item ' + a[i].所属 + '" room-data="room' + a[i].場所 + '"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;">'
     + '<img src="muuri_module/img/' + a[i].URL + '" alt="" /><br><br><hr class="hr1">'
     + '<p style="margin-left: 10px;"><strong>[資産番号] </strong>' + a[i].資産番号 + '</p>'
     + '<p style="margin-left: 10px;"><strong>[資産名] </strong>' + a[i].資産名 +'</p>'
-    + '<p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>' + a[i].担当 + ' / ' + a[i].場所 + '</p>'
+    + '<p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>' + a[i].所属 + ' / ' + a[i].場所 + '</p>'
     + '<p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>' + a[i].担当 + ' / ' + a[i].管理者 + '</p>'
     + '<p style="margin-left: 10px;"><strong>[形式] </strong>' + a[i].形式 +'</p>'
     + '<p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>' + a[i].個数 + ' / ' + a[i].識別番号 + '</p>'
@@ -471,6 +473,7 @@ addcode += '<li class="item EE" room-data="room405"><div class="item-content" st
 
 //生成した変数addcodeをinsertする
 structure_text.insertAdjacentHTML('afterend',addcode);
+
 };
 
 //

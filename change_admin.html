@@ -1,98 +1,128 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
+<html>
+  <head>
   <meta charset="UTF-8">
-  <!-- <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/list.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/submit.css">
 
-  <link rel="stylesheet" href="css/change_follower.css">
-
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/root.js"></script>
-
-  <meta charset="utf-8">
-  <title>変更</title>
-</head>
-
-<!-- <nav id="g_navi">
-  <ul>
-    <li><a href="list.html">一覧・検索</a></li>
-    <li><a href="submit_follower.html">登録</a></li>
-    <li><a href="change_follower.html">変更</a></li>
-    <li><a href="user_info_follower.html">ユーザ情報編集</a></li>
-  </ul>
-</nav> -->
-
-<body>
-  <h1>変更</h1>
-  <a class="home_link" href="home_admin.html">ホーム</a>
-  <hr class="hr1">
-
-  <div class="center_form">
+  <link href="css/library/select2.min.css" rel="stylesheet" />
+  <script src="js/library/jquery-3.6.0.min.js"></script>
+  <script src="js/library/select2.min.js"></script>
   
-  <label for="Asset_name">資産名</label>
-  <input type="text" name="Asset_name" id="Asset_name">
+  <script type="text/javascript" src="js/root.js"></script>
+  <script type="text/javascript" src="js/login_function.js"></script>
 
+    <meta charset="utf-8">
+    <title>資産の登録</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
+    <style>
+      body {
+        font-family: "Alegreya Sans SC";
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  
+
+  <body>
+  
+  <!-- タイトル -->
   <br>
+  <p class="title1">資産情報編集</p>
+  
 
-  <label for="Fromat">形式</label>
-  <select name="Fromat" id="Fromat">
-    <option value="printer">プリンター</option>
-    <option value="pc">PC</option>
-  </select>
 
-  <br>
-
-  <label for="Affiliation">所属</label>
-  <select name="Affiliation" id="Affiliation">
-    <option value="CS">CS</option>
-    <option value="ME">ME</option>
-    <option value="EE">EE</option>
-    <option value="AD">AD</option>
-  </select>
-
-  <br>
-
-  <label for="Place">場所</label>
-  <select name="Place" id="Place">
-    <option value="401">401</option>
-    <option value="402">402</option>
-    <option value="403">403</option>
-    <option value="404">404</option>
-  </select>
-
-  <br>
-
-  <label for="Responsible">担当</label>
-  <select name="Responsible" id="Responsible">
-    <option value="shimakawa">shimakawa</option>
-    <option value="ooshima">ooshima</option>
-  </select>
-
-  <br>
-
-  <label for="Administrator">管理者</label>
-  <input type="text" name="Administrator" id="Administrator">
-
-  <br>
-
-  <label for="Number">個数</label>
-  <input type="text" name="Number" id="Number">
-
+  <!-- USER -->
+  <figure class="image1"><img src="./images/taguwa.jpg" alt="icon" ></figure>
+  <p class="text1"><strong>s18526@salesio-ac.sp.jp</strong></p>
+  <p class="text2">User | taguwa</p>
+  
+  <!-- BOTTON -->
+  <div style="position:absolute; margin-left: 60%; margin-top : 0px">
+    <a href="home_admin.html"><img src="images/3.png" class="img-button" width="100" height="100"></a>
+    <a href="user_management.html"><img src="images/2.png" class="img-button" width="100" height="100"></a>
   </div>
 
-  <!-- 画像の表示は要検討 -->
-  <img class="Asset_photo_src" src="images//1920x1080.png">
+  <hr class="hr1">
+  <br><br><br><br>
+  <hr class="hr1">
 
-  <br>
+  <!-- メッセージ -->
+          <div class="message-body">
+            <div id="message_submit"><strong>選択した資産情報の変更が行えます</strong><br>
+              ・戻る場合はメニューの資産ボタンを押してください<br><br>
+              ・　_________________________を押し、確認後______________を押すことで変更されます<br><br>
+              </div>
+              
+          </div>
+          
+  <div  class="flex_1">
+    <div class ="cont_1">
+    <br>
+    <input id="submit_number" type="text" placeholder="資産番号" />
 
-  <button class="Finish_button" type="button" onclick="location.href='list.html'">完了</button>
+    <br>
+    <select id="submit_kind">
+      <option value="default">所属</option>
+      <option value="AD">AD</option>
+      <option value="EE">EE</option>
+      <option value="ME">ME</option>
+      <option value="CS">CS</option>
+    </select>
+
+    <br>
+    <input id="submit_name" type="text" placeholder="資産名" />
+
+    <br>
+
+    <input id="submit_place" type="text" placeholder="場所" />
+
+    <br>
+    <input id="submit_user" type="text" placeholder="担当" />
+      
+    <br>
+    <input id="submit_admin" type="text" placeholder="管理者" />
+      
+    <br>
+    <input id="submit_format" type="text" placeholder="形式" />
+
+    <br>
+    <input id="submit_math" 4type="text" placeholder="個数" />
+  
+    <br>
+    <input id="submit_date" type="date" placeholder="日付" />
+
+    <br>
+    <input id="submit_images" type="text" placeholder="URL">
+  <div>
+    <input id="submit_button" type="button" value="入力内容を確認" onclick="submit_input()" />
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
 
+ 
+  <div class="cont_3">
+    <br>
+    <br>
+    <span id="message_out"></span>
+  
+    <article id="submit_botton">
+
+    </article>
+
+  </div>
+  </div>
+
+  
+    
+    <p class="must">入力内容を確認</p>
+    <p class="must-1">変更</p>
+   
   <script src="js/scripts.js"></script>
   <script src="js/root.js"></script>
-</body>
 
+  </body>
 </html>
