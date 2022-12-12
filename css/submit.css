@@ -5,19 +5,22 @@
     border: 3px solid #043454;
 }
 
-
+.cont_0{
+	width: 300px;
+	left :50px;
+    border: 0px solid #043454;
+}
 .cont_1{
-	width: 500px;
+	width: 380px;
 	left :50px;
     border: 0px solid #043454;
 }
 .cont_2{
-	width:100px;
+	width:70px;
     border: 0px solid #043454;
 }
 .cont_3{
-	width:200px;
-    border: 1px solid #043454;
+	width:300px;
 }
 
 .must{
@@ -36,6 +39,31 @@
 .must-1{
 	left:310px;
 	top:-750px;
+	height: 20px;
+	width: 75px;
+	padding: 0 20px;
+	position: relative;
+	border-radius: 10px;
+	outline: 0;
+	color: #fcfcfc;
+	background: #043454;
+}
+.must00{
+	left:55px;
+	top:-675px;
+	height: 20px;
+	width: 150px;
+	padding: 0 20px;
+	position: relative;
+	border-radius: 10px;
+	outline: 0;
+	color: #fcfcfc;
+	background: #043454;
+}
+
+.must01{
+	left:310px;
+	top:-695px;
 	height: 20px;
 	width: 75px;
 	padding: 0 20px;
@@ -264,3 +292,99 @@
 	color: #fcfcfc;
 	background: #043454;
 }
+
+/*cont_0*/
+
+.label1{
+	text-align: right;
+    position: relative;
+	top:0px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label2{
+	text-align: right;
+    position: relative;
+	top:27px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label3{
+	text-align: right;
+    position: relative;
+	top:54px;
+	left:20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label4{
+	text-align: right;
+    position: relative;
+	top:81px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label5{
+	text-align: right;
+    position: relative;
+	top:108px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label6{
+	text-align: right;
+    position: relative;
+	top:135px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label7{
+	text-align: right;
+    position: relative;
+	top:162px;
+	left: 20%;
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+  .label8{
+	text-align: right;
+    position: relative;
+	top:189px;
+	left: 20%;	
+	color: #000000; 
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+
+  .label9{
+	text-align: right;
+    position: relative;
+	top:216px;
+	left: 20%;
+	color: #000000;
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+
+  .label10{
+	text-align: right;
+    position: relative;
+	top:243px;
+	left: 20%;
+	color: #000000;
+	border-left:0px solid #000000;
+	padding:2px 10px;
+  }
+
