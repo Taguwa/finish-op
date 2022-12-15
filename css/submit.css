@@ -286,7 +286,8 @@
 	width: 200px;
 	height: 50px;
 	padding: 0 20px;
-	position: absolute;
+	position: relative;
+	top:10px;
 	border-radius: 20px;
 	outline: 0;
 	color: #fcfcfc;

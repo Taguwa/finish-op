@@ -25,7 +25,7 @@
   </head>
   
 
-  <body>
+  <body onload = "change_module();">
   
   <!-- タイトル -->
   <br>
@@ -74,59 +74,15 @@
       
       </div>
     <div class ="cont_1">
-    <br>
-    <input id="submit_number" type="text" placeholder="資産番号" />
-
-    <br>
-    <select id="submit_kind">
-      <option value="default">所属</option>
-      <option value="AD">AD</option>
-      <option value="EE">EE</option>
-      <option value="ME">ME</option>
-      <option value="CS">CS</option>
-    </select>
-
-    <br>
-    <input id="submit_name" type="text" placeholder="資産名" />
-
-    <br>
-
-    <input id="submit_place" type="text" placeholder="場所" />
-
-    <br>
-    <input id="submit_user" type="text" placeholder="担当" />
+      <span id="mess"></span>
       
-    <br>
-    <input id="submit_admin" type="text" placeholder="管理者" />
-      
-    <br>
-    <input id="submit_format" type="text" placeholder="形式" />
-
-    <br>
-    <input id="submit_math" 4type="text" placeholder="個数" />
-  
-    <br>
-    <input id="submit_date" type="date" placeholder="日付" />
-
-    <br>
-    <input id="submit_images" type="text" placeholder="URL">
-  <div>
-    <input id="submit_button" type="button" value="入力内容を確認" onclick="submit_input()" />
-  </div>
-
-  <br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 
  
   <div class="cont_3">
     <br>
-    <br>
     <span id="message_out"></span>
-  
-    <article id="submit_botton">
-
-    </article>
 
   </div>
   </div>
