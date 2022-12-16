@@ -9,6 +9,11 @@
   <link rel="stylesheet" type="text/css" href="muuri_module/css/search_reset.css" />
   <link rel="stylesheet" type="text/css" href="muuri_module/css/search_main.css" />
 
+
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/root.js"></script>
+  <script type="text/javascript" src="js/login_function.js"></script>
+
   <script src="muuri_module/js/jquery.min.js"></script>
   <script src="muuri_module/js/web-animations.min.js"></script>
   <script src="muuri_module/js/muuri.js"></script>
@@ -17,10 +22,6 @@
   <link href="css/library/select2.min.css" rel="stylesheet" />
   <script src="js/library/jquery-3.6.0.min.js"></script>
   <script src="js/library/select2.min.js"></script>
-
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/root.js"></script>
-  <script type="text/javascript" src="js/login_function.js"></script>
 
   <meta charset="utf-8">
   <title>資産の一覧表示</title>
@@ -110,67 +111,18 @@
       </select>
     </div>
 
-    <input id="search_" type="button" value="上記の条件で絞り込み" onclick="data_change_format_muuriHTML();" />
+    <input id="search_" type="button" value="上記の条件で絞り込み" onclick="refresh();" />
     <br><br><br><br><br>
   </div>
   <br><br>
-
-  <!-------------->
-<!--
-  <ul class="grid">
-    <li class="item AD" room-data="room405">
-      <div class="item-content">
-        <img src="muuri_module/img/480x320.png" alt="" />
-        image_01
-      </div>
-    </li>
-
-    <li class="item CS" room-data="room406">
-      <div class="item-content">
-        <img src="muuri_module/img/946.png" alt="" />
-        image_02
-      </div>
-    </li>
-
-    <li class="item ME" room-data="room405">
-      <div class="item-content">
-        <img src="muuri_module/img/946.png" alt="" />
-        image_03
-      </div>
-    </li>
-
-    <li class="item AC" room-data="room407">
-      <div class="item-content">
-        <img src="muuri_module/img/480x320.png" alt="" />
-        image_04
-      </div>
-    </li>
-
-    <li class="item EE" room-data="room406">
-      <div class="item-content">
-        <img src="muuri_module/img/480x320.png" alt="" />
-        image_05
-      </div>
-    </li>
-  </ul>
--->
 
 <div style = "text-align: center;">
   <strong>- 資産一覧 -</strong></div><br><br>
 
 <ul class="grid">
-<li class="item CS" room-data="room413"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/006.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000001</p><p style="margin-left: 10px;"><strong>[資産名] </strong>サーバーラック</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 413</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>YRK1200</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=1&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item CS" room-data="room413"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/009.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000002</p><p style="margin-left: 10px;"><strong>[資産名] </strong>ドローン</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 413</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>???</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=2&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item EE" room-data="room中庭"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/010.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000003</p><p style="margin-left: 10px;"><strong>[資産名] </strong>銅像</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>EE / 中庭</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>???</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=3&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item AD" room-data="room402"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/011.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000004</p><p style="margin-left: 10px;"><strong>[資産名] </strong>椅子</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>AD / 402</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>卒業制作</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=4&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item CS" room-data="room408"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/008.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000005</p><p style="margin-left: 10px;"><strong>[資産名] </strong>本</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 408</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>アルゴリズムとデータ構造</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=5&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li>
+  <li class="item CS" room-data="room413"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/006.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000001</p><p style="margin-left: 10px;"><strong>[資産名] </strong>サーバーラック</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 413</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>YRK1200</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=1&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item CS" room-data="room413"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/009.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000002</p><p style="margin-left: 10px;"><strong>[資産名] </strong>ドローン</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 413</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>???</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=2&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item EE" room-data="room中庭"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/010.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000003</p><p style="margin-left: 10px;"><strong>[資産名] </strong>銅像</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>EE / 中庭</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>???</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=3&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item AD" room-data="room402"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/011.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000004</p><p style="margin-left: 10px;"><strong>[資産名] </strong>椅子</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>AD / 402</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>卒業制作</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=4&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li><li class="item CS" room-data="room408"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;"><img src="muuri_module/img/008.png" alt="" /><br><br><hr class="hr1"><p style="margin-left: 10px;"><strong>[資産番号] </strong>00000005</p><p style="margin-left: 10px;"><strong>[資産名] </strong>本</p><p style="margin-left: 10px;"><strong>[所属学科 / 場所] </strong>CS / 408</p><p style="margin-left: 10px;"><strong>[担当 / 管理者] </strong>sushida / sushida</p><p style="margin-left: 10px;"><strong>[形式] </strong>アルゴリズムとデータ構造</p><p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>1 / 1</p><p style="margin-left: 10px;"><strong>[取得日時] </strong>2022/12/06</p><hr class="hr1"><input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id=5&apos;" /><input id="get_" type="button" value="削除" onclick="" /></div></li>
+  <!--<span id="muuri_fuck"></span>-->
 </ul>
- <!-- 要素自動生成 -->
- <!--
-  <ul class="grid">
-    
-  <article id="structure_text">
-
-  </article>
-
-  </ul>
--->
 
   <!-- 表示スペース -->
 
@@ -186,22 +138,6 @@
 
   <a href="change_admin.html"><img src="images/taguwa.jpg" class="img-button" width="100" height="100"></a>
 
-  デバックゾーン
-  <div class="columns">
-    <div class="column">
-      <input id="csv_file" value="ファイルを直接開く" type="file">
-      <input type="button" value="データ更新" onclick="refresh();">
-      <input type="button" value="*debug console.log(data)" onclick="aaa();">
-    </div>
-  </div>
-
-  <div>
-    <input type="button" value="この条件で検索" onclick="aaa()" />
-    <input type="button" value="この条件で検索" onclick="kind_search()" />
-    <input type="button" value="この条件で検索" onclick="user_search()" />
-    <input type="button" value="この条件で検索" onclick="admin_search()" />
-  </div>
-  </section>
 
 
   <script src="js/scripts.js"></script>
