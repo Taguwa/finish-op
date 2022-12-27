@@ -81,18 +81,4 @@
 	overflow: hidden;
 	position: relative;
   }
-  .text1 {
-    position: absolute;
-	top: 160px;
-	left: 84%;
-	border-left:5px solid #8aff96;
-	padding:2px 10px;
-		
-  }
-  .text2 {
-    position: absolute;
-	top: 180px;
-	left: 84%;
-	border-left:5px solid #8aff96;
-	padding:2px 10px;
-  }
+ 

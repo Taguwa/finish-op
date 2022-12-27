@@ -4,8 +4,6 @@
 //
 //
 
-message.innerHTML = "データを取得してください";
-
 //
 //select2 config
 //
@@ -62,12 +60,26 @@ connection.query('SELECT * from data;', function (err, rows, fields) {
 
 function refresh() {
     message.innerHTML ="データを絞り込みました";
-    confirm("aaa");
 };
 
 //
 //表示関係
 //
+
+function user_(){
+var accout_permission = 0; //0 admin 1 user
+
+    if(accout_permission == 0){
+    user_print.innerHTML = '<figure class="image1"><img src="./images/taguwa.jpg" alt="icon" ></figure>'+
+                            '<p class="text1" style ="position: absolute; top: 160px; left: 84%; border-left:5px solid #ff2525; padding:2px 10px;"><strong> '+ "email" +'</strong></p>'+
+                            '<p class="text2" style ="position: absolute; top: 180px; left: 84%; border-left:5px solid #ff2525; padding:2px 10px;">'+ "Admin" +' | '+ "name" +'</p>';
+    }else{
+    user_print.innerHTML = '<figure class="image1"><img src="./images/taguwa.jpg" alt="icon" ></figure>'+
+                            '<p class="text1" style ="position: absolute; top: 160px; left: 84%; border-left:5px solid #8aff96; padding:2px 10px;"><strong> '+ 0 +'</strong></p>'+
+                            '<p class="text2" style ="position: absolute; top: 180px; left: 84%; border-left:5px solid #8aff96; padding:2px 10px;">'+ "User" +' | '+ 0 +'</p>';
+    }
+};
+
 
 //棚卸しで使うかも
 function consoleLog_export_csv(){
@@ -144,7 +156,7 @@ URL: '008.png'}]
 //HTML生成
 var addcode = '';
 for(var i = 0 ; i < a.length ;i ++){
-                    addcode += '<li class="item ' + a[i].所属 + '" room-data="room' + a[i].場所 + '"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;">'
+                    addcode += '<li class="item ' + a[i].所属 + ' ' + a[i].場所 + ' ' + a[i].担当 + ' ' + a[i].管理者 + '"><div class="item-content" style="background-color:#ffffffe1; border: 2px solid #043454;">'
                         + '<img src="muuri_module/img/' + a[i].URL + '" alt="" /><br><br><hr class="hr1">'
                         + '<p style="margin-left: 10px;"><strong>[資産番号] </strong>' + a[i].資産番号 + '</p>'
                         + '<p style="margin-left: 10px;"><strong>[資産名] </strong>' + a[i].資産名 +'</p>'
@@ -154,10 +166,10 @@ for(var i = 0 ; i < a.length ;i ++){
                         + '<p style="margin-left: 10px;"><strong>[個数 - 識別番号] </strong>' + a[i].個数 + ' / ' + a[i].識別番号 + '</p>'
                         + '<p style="margin-left: 10px;"><strong>[取得日時] </strong>' + a[i].取得日時 + '</p><hr class="hr1">'
                         + '<input id="get_" type="button" value="変更" onclick="location.href = &apos;change_admin.html?id='+ a[i].id +'&apos;" />'
-                        + '<input id="get_" type="button" value="削除" onclick="" /></div></li>';
+                        + '<input id="get_" type="button" value="削除" onclick="delete_structure('+a[i].資産番号+',&apos;'+a[i].資産名+'&apos;);" /></div></li>';
 }
  console.log(addcode);
- message.innerHTML ="データを取得しました";
+ message_.innerHTML ="使用可能";
  muuri_fuck.innerHTML = addcode;
 };
 
@@ -363,3 +375,12 @@ function commit_input(){
 //
 //削除
 //
+function delete_structure(id,name){
+    var result = window.confirm('資産番号 : '+id+'\r\n' + '資産名 : '+name+'\r\n' +'の資産を削除しますか？');
+    if(result == true){
+        //delete
+        
+        
+        data_change_format_muuriHTML();
+    }
+};
